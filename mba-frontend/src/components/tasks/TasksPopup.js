@@ -10,6 +10,15 @@ class TasksPopup extends Component {
       name: '',
       description: ''
     }
+
+    this.updateFormData = this.updateFormData.bind(this);
+  }
+
+  updateFormData(data) {
+    this.setState({
+      name: data.name,
+      description: data.description
+    })
   }
 
   render() {
@@ -21,7 +30,7 @@ class TasksPopup extends Component {
           <Modal.Title>New Task</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <TasksFormPopup data={this.state} />
+          <TasksFormPopup data={this.state} updateState={(data) => this.updateFormData(data)}/>
         </Modal.Body>
         <Modal.Footer>
           <Button bsStyle="primary" 
