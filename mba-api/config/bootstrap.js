@@ -27,6 +27,16 @@ module.exports.bootstrap = async function(done) {
   // ]);
   // ```
 
+  if (await Tasks.count() > 0) {
+    return done();
+  }
+
+  await Tasks.createEach([
+    {name: 'Task 001', description: 'Description Task 001',},
+    {name: 'Task 002', description: 'Description Task 002'},
+    {name: 'Task 003', description: 'Description Task 003'},
+  ]);
+
   // Don't forget to trigger `done()` when this bootstrap function's logic is finished.
   // (otherwise your server will never lift, since it's waiting on the bootstrap)
   return done();

@@ -3,9 +3,18 @@ import PropTypes from 'prop-types';
 import { ListGroupItem } from 'react-bootstrap';
 
 class TasksItem extends Component {
+  constructor(props) {
+    super(props);
+    this.removeItem = this.removeItem.bind(this);
+  }
+
+  removeItem() {
+    this.props.removeItem(this.props.item.id);
+  }
+
   render () {
     return (
-      <ListGroupItem header={this.props.item.title}>
+      <ListGroupItem header={this.props.item.name} onClick={this.removeItem} >
         {this.props.item.description}
       </ListGroupItem>
     );
