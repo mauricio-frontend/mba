@@ -1,7 +1,6 @@
 # mba-api
 
-a [Sails v1](https://sailsjs.com) application
-
+a [Sails v1](https://sailsjs.com){:target="_blank"} application
 
 ### Links
 
