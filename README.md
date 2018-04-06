@@ -5,20 +5,26 @@
 
 # Instruções
 
-https://nodejs.org/en/
++ https://nodejs.org/en/
 
-como admin
-npm install yarn sails -g
++ como admin
 
-git clone https://github.com/mauricio-frontend/mba.git
++ npm install yarn sails -g
 
++ git clone https://github.com/mauricio-frontend/mba.git
 
-após clone dentro diretório mba-api
-npm install para instalar dependências
-sails lift para rodar o serviço da api rest
-api visível em localhost:1337
++ após clone dentro diretório mba-api
 
-dentro do diretório mba-frontend
-npm install
-yarn start
-projeto visível em localhost:3000
++ npm install para instalar dependências
+
++ sails lift para rodar o serviço da api rest
+
++ api visível em localhost:1337
+
++ dentro do diretório mba-frontend
+
++ npm install
+
++ yarn start
+
++ projeto visível em localhost:3000
