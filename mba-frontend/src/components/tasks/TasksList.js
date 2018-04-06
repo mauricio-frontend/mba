@@ -8,7 +8,8 @@ class TasksList extends Component {
     super();
     this.state = {
       items: [],
-      modalIsVisible: false
+      modalIsVisible: false,
+      sizeItems: 0
     }
     this.handleShowPopup = this.handleShowPopup.bind(this);
     this.hideModal = this.hideModal.bind(this);
@@ -21,8 +22,9 @@ class TasksList extends Component {
       return results.json();
     }).then(data => {
       this.setState({
-        items: data
-      })
+        items: data,
+        sizeItems: data.lenght
+      });
     });
   }
 
@@ -87,9 +89,11 @@ class TasksList extends Component {
 
   render() {
     const items = this.state.items;
-    const listItems = items.lenght > 0  ? items.map((item) => {
+    const sizeItems = this.state.sizeItems;
+
+    const listItems = items.map((item) => {
       return <TasksItem item={item} key={item.id} removeItem={(id) => this.removeTask(id)} />
-    }) : <ListGroupItem>No one tasks registered</ListGroupItem>;
+    });
 
     return (
       <div>
