@@ -41,7 +41,7 @@ class TasksList extends Component {
   }
 
   saveDataModal(parameters) {
-    const items = this.state.items;
+    let items = this.state.items;
     const _this = this;
     const dataForm = {
       name: parameters.name,
