@@ -16,6 +16,10 @@ module.exports = {
     description: {
         type: 'string',
         required: true
+    },
+
+    responsible: {
+        model: 'peoples'
     }
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
